@@ -49,13 +49,13 @@ const Header = () => {
         </nav>
 
         {/* Search Bar for Desktop */}
-        <div className="flex-1 hidden md:block mx-6">
+        {/* <div className="flex-1 hidden md:block mx-6">
           <input
             type="text"
             placeholder="Search for books..."
             className="w-full border rounded-md px-4 py-2 focus:ring focus:ring-blue-300 focus:outline-none"
           />
-        </div>
+        </div> */}
 
         {/* CTA Button */}
         <div>

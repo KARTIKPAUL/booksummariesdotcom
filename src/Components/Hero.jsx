@@ -13,66 +13,67 @@ const HeroSection = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="hero-section bg-gradient-to-r from-blue-500 to-blue-400 text-white py-20 px-6 text-center min-h-screen flex flex-col justify-center items-center space-y-8">
-      {/* Main Heading */}
+    <div className="hero-section bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white py-16 px-8 min-h-screen flex flex-col justify-center items-center space-y-10">
+      <div className="flex-1 hidden md:block mx-6 w-1/2">
+          <input
+            type="text"
+            placeholder="Search for books..."
+            className="w-full border rounded px-5 py-3 focus:ring  focus:outline-none text-black text-2xl"
+          />
+        </div>
+      {/* Animated Heading */}
       <h1
-        className={`text-4xl md:text-6xl font-bold mb-4 opacity-0 transform transition-all duration-1000 ease-out ${
-          inView ? 'opacity-100 translate-y-0' : 'translate-y-6'
+        className={`text-4xl md:text-8xl font-extrabold text-center opacity-0 transform transition-all duration-1000 ease-out ${
+          inView ? 'opacity-100 translate-y-0' : 'translate-y-10'
         }`}
       >
-        Discover the Best Book Summaries
+        Welcome to BookSummery
       </h1>
 
-      {/* Subheading */}
+      {/* Brief Description */}
       <p
-        className={`text-lg md:text-xl mb-6 opacity-0 transform transition-all duration-1000 ease-out ${
-          inView ? 'opacity-100 translate-y-0' : 'translate-y-6'
+        className={`text-lg md:text-2xl text-center leading-relaxed max-w-4xl mx-auto opacity-0 transform transition-all duration-1000 ease-out ${
+          inView ? 'opacity-100 translate-y-0' : 'translate-y-10'
         }`}
       >
-        Unlock key insights from thousands of books in just minutes.
+        At BookVerse, we believe in the power of knowledge and storytelling. Our platform delivers expertly crafted summaries of the world's most influential books, saving you time while empowering you to grow and succeed.
       </p>
 
-      {/* Additional Text */}
-      <div className="space-y-6">
+      {/* Aligned Paragraph Content */}
+      <div className="text-left max-w-3xl mx-auto space-y-6">
         <p
-          className={`text-lg md:text-xl opacity-0 transform transition-all duration-1000 ease-out ${
-            inView ? 'opacity-100 translate-y-0' : 'translate-y-6'
+          className={`text-lg md:text-xl leading-8 opacity-0 transform transition-all duration-1000 ease-out ${
+            inView ? 'opacity-100 translate-y-0' : 'translate-y-10'
           }`}
         >
-          Don't have the time to read long books? We have the perfect solution!
+          Explore thousands of summaries, whether you’re interested in personal development, business insights, or timeless classics. Each summary distills the key takeaways, giving you actionable insights in just minutes.
         </p>
         <p
-          className={`text-lg md:text-xl opacity-0 transform transition-all duration-1000 ease-out ${
-            inView ? 'opacity-100 translate-y-0' : 'translate-y-6'
+          className={`text-lg md:text-xl leading-8 opacity-0 transform transition-all duration-1000 ease-out ${
+            inView ? 'opacity-100 translate-y-0' : 'translate-y-10'
           }`}
         >
-          Our expertly crafted summaries provide you with the essential ideas and key takeaways.
+          Join a community of curious minds, professionals, and lifelong learners who are unlocking knowledge on the go. With BookVerse, you can access essential ideas anytime, anywhere.
         </p>
         <p
-          className={`text-lg md:text-xl opacity-0 transform transition-all duration-1000 ease-out ${
-            inView ? 'opacity-100 translate-y-0' : 'translate-y-6'
+          className={`text-lg md:text-xl leading-8 opacity-0 transform transition-all duration-1000 ease-out ${
+            inView ? 'opacity-100 translate-y-0' : 'translate-y-10'
           }`}
         >
-          Whether you're a busy professional or an avid learner, our summaries are here to help you grow.
-        </p>
-        <p
-          className={`text-lg md:text-xl opacity-0 transform transition-all duration-1000 ease-out ${
-            inView ? 'opacity-100 translate-y-0' : 'translate-y-6'
-          }`}
-        >
-          Join our community and start unlocking knowledge today!
+          Start your journey today and transform the way you read, learn, and grow.
         </p>
       </div>
 
       {/* Call to Action Button */}
-      <button className="px-8 py-3 bg-white text-indigo-500 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition-all">
-        Get Started
-      </button>
+      <div className="mt-10">
+        <button className="px-8 py-4 bg-white text-indigo-600 font-bold text-lg rounded-lg shadow-lg hover:bg-gray-100 transition-all">
+          Discover More
+        </button>
+      </div>
     </div>
   );
 };
