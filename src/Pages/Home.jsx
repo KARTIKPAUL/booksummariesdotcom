@@ -1,20 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import HeroSection from '../Components/Hero';
+
 
 const Home = () => {
+  
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 px-6 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Discover the Best Book Summaries
-        </h1>
-        <p className="text-lg md:text-xl mb-6">
-          Unlock key insights from thousands of books in just minutes.
-        </p>
-        <button className="px-8 py-3 bg-white text-indigo-500 font-semibold rounded-lg shadow-lg hover:bg-gray-100">
-          Get Started
-        </button>
-      </div>
+      <HeroSection />
 
       {/* Categories Section */}
       <div className="container mx-auto py-12">
