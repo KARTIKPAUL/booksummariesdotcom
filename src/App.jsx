@@ -1,19 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout';
+import Home from './Pages/Home';
+import Genres from './Pages/Genres';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <>
-    <Header />
-    <Footer />
-   </>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="genres" element={<Genres />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
